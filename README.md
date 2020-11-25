@@ -1,1 +1,3 @@
 # autoroute
+
+在openwrt有多張網卡多個ip的時候自動設定route

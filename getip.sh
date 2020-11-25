@@ -1,0 +1,12 @@
+LAN_IP=`ubus call network.interface.lan status | jsonfilter -e '@["ipv4-address"][0].address'`
+LAN_MASK=`ubus call network.interface.lan status | jsonfilter -e '@["ipv4-address"][0].mask'`
+LAN_DEV=`ubus call network.interface.lan status | jsonfilter -e '@["device"]'`
+WAN_IP=`ubus call network.interface.wan status | jsonfilter -e '@["ipv4-address"][0].address'`
+WAN_MASK=`ubus call network.interface.wan status | jsonfilter -e '@["ipv4-address"][0].mask'`
+WAN_DEV=`ubus call network.interface.wan status | jsonfilter -e '@["device"]'`
+echo "LAN_IP=$LAN_IP"
+echo "LAN_MASK=$LAN_MASK"
+echo "LAN_DEV=$LAN_DEV"
+echo "WAN_IP=$WAN_IP"
+echo "WAN_MASK=$WAN_MASK"
+echo "WAN_DEV=$WAN_DEV"
